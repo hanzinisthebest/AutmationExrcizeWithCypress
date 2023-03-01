@@ -1,0 +1,37 @@
+/// <reference types="Cypress" />
+import { homePage } from "../selectors/homePage";
+import { signup } from "../selectors/signupPage";
+
+describe('signup',()=>{
+    it('signup and delete',()=>{
+        cy.visit(homePage.path)
+        cy.contains(homePage.title).should('be.visible')
+        cy.contains(homePage.navbarBtns.siginUpAndLoginBtn).click()
+        cy.contains(signup.titel).should('be.visible')
+        cy.get(signup.namkeInput).type(signup.detailesData.name)
+        cy.get(signup.emailInput).type(signup.detailesData.email)
+        cy.get(signup.signupBtn).click()
+        cy.contains(signup.deatiles.titel).should('be.visible')
+        cy.get(signup.deatiles.sexBtns).eq(0).click()
+        cy.get(signup.deatiles.passwordInput).type(signup.detailesData.password)
+        cy.get(signup.deatiles.daySelect).select(6)
+        cy.get(signup.deatiles.monthSelect).select(4)
+        cy.get(signup.deatiles.yearSelect).select(4)
+        cy.contains(signup.deatiles.newsPick).click()
+        cy.contains(signup.deatiles.receiveBtn).click()
+        cy.get(signup.adressInfo.firstNameInput).type(signup.adressData.firstName)
+        cy.get(signup.adressInfo.lastNameInput).type(signup.adressData.lastName)
+        cy.get(signup.adressInfo.companyName).type(signup.adressData.company)
+        cy.get(signup.adressInfo.adress).type(signup.adressData.adress)
+        cy.get(signup.adressInfo.secondAdress).type(signup.adressData.adressSec)
+        cy.get(signup.adressInfo.country).select(3)
+        cy.get(signup.adressInfo.state).type(signup.adressData.state)
+        cy.get(signup.adressInfo.city).type(signup.adressData.city)
+        cy.get(signup.adressInfo.zipcode).type(signup.adressData.zipcode)
+        cy.get(signup.adressInfo.mobileNumber).type(signup.adressData.mobileNumber)
+        cy.get(signup.adressInfo.createBtn).click()
+        cy.contains(signup.verfAcount).should('be.visible')
+        cy.get(signup.continueBtn).click()
+        cy.contains(signup.logedAs).should('be.visible')
+    })
+})

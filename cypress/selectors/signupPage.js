@@ -1,0 +1,52 @@
+export const signup = {
+    titel:'New User Signup!',
+    namkeInput:"[data-qa='signup-name']",
+    emailInput:"[data-qa='signup-email']",
+    signupBtn:"[data-qa='signup-button']",
+    deatiles:{
+        titel:'Enter Account Information',
+        sexBtns:'.clearfix>.radio-inline',
+        passwordInput:"[data-qa='password']",
+        daySelect:"[data-qa='days']",
+        monthSelect:"[data-qa='months']",
+        yearSelect:"[data-qa='years']",
+        newsPick:'Sign up for our newsletter!',
+        receiveBtn:'Receive special offers from our partners!',
+    },
+    detailesData:{
+        name:'motty',
+        email:'mottyhn16354@gmail.com',
+        password:'mottyIsTheBest',
+    },
+    adressInfo:{
+        firstNameInput:"[data-qa='first_name']",
+        lastNameInput:"[data-qa='last_name']",
+        companyName:"[data-qa='company']",
+        adress:"[data-qa='address']",
+        secondAdress:"[data-qa='address2']",
+        country:"[data-qa='country']",
+        state:"[data-qa='state']",
+        city:"[data-qa='city']",
+        zipcode:"[data-qa='zipcode']",
+        mobileNumber:"[data-qa='mobile_number']",
+        createBtn:"[data-qa='create-account']"
+    },
+    adressData:{
+        firstName:'mordi',
+        lastName:'hanzin',
+        company:'IDF',
+        adress:'10 Easy',
+        adressSec:'10 Hard',
+        state:'zibi',
+        city:'zooby',
+        zipcode:'123',
+        country:'Australia',
+        mobileNumber:'0545611167'
+    },
+    verfAcount:'Account Created!',
+    continueBtn:"[data-qa='continue-button']",
+    logedAs:'motty',
+    deleteBtn:' Delete Account',
+    verfDelete:'Account Deleted!',
+    continueDeleteBtn:'[data-qa="continue-button"]'
+}
