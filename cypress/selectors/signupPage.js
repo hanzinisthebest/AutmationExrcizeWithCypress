@@ -15,7 +15,7 @@ export const signup = {
     },
     detailesData:{
         name:'motty',
-        email:'mottyhn16354@gmail.com',
+        email:'mottyhn34@gmail.com',
         password:'mottyIsTheBest',
     },
     adressInfo:{
